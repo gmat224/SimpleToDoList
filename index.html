@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<!--References
+    Tyler Potts: https://www.youtube.com/watch?v=MkESyVB4oUw&list=WL&index=9&ab_channel=TylerPotts
+    W3schools: https://www.w3schools.com/css/
+-->
+<body>
+    <header>
+        <!--Main title-->
+        <h1>To Do:</h1>
+        <!--Enter form with submit button-->
+        <form id="new-item-form">
+            <input
+                type="text"
+                id="new-item-input"
+                placeholder="Enter Item"
+            />
+            <input
+                type="submit"
+                id="new-item-submit"
+                value="Add Item"
+            />
+        </form>
+    </header>
+    <!--Main section where list items will be added-->
+    <main>
+        <section class="list-todo">
+            <h2>To Do: </h2>
+            <div id="todo">
+                <!--List items will be placed here-->
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

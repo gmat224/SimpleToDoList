@@ -1,0 +1,158 @@
+:root {
+    --dark: #1e3e16;
+    --darker: #02240f;
+    --darkest: #000000;
+    --grey: #ffffff;
+    --light: #EEE;
+    --lightgreen: #00ff3c;
+    --blue: #2fffea;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#new-item {
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-item-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+
+#new-item-input::placeholder{
+    color:var(--grey);
+}
+
+#new-item-submit{
+    color: var(--lightgreen);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--lightgreen), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-item-submit:hover {
+    opacity: 0.8;
+}
+
+#new-item-submit:active{
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.list-todo {
+    padding: 1rem;
+}
+
+.list-todo h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#todo .todo {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#todo .todo .content{
+    flex:1 1 0%;
+}
+
+#todo .todo .content .text {
+    color: var(--light);
+    font-size: 1.125;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#todo .todo .content .text::not(:read-only){
+    color: var(--lightgreen);
+
+}
+
+#todo .todo .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+#todo .task .actions button {
+    cursor: pointer;
+    margin: 0 -0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+#todo .todo .actions button:hover {
+    opacity: 0.8;
+}
+
+#todo .todo .actions button:active{
+    opacity: 0.6;
+}
+
+#todo .todo .actions .edit {
+    background-image: linear-gradient(to right, var(--lightgreen), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#todo .todo .actions .delete {
+    color: crimson;
+}
